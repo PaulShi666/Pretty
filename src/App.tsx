@@ -1,24 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Pretty from "./components/Pretty";
 
 function App() {
+    const [prettyData,setPrettyData] = useState(
+        JSON.stringify(["'/foo'","'/bar'",{"baz":"baz","quz":{"quz":"quz"}},["'/baz'",["/qux"]]])
+    );
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Pretty data={prettyData}/>
     </div>
   );
 }
