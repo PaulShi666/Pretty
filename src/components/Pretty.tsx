@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.css';
+import './Pretty.css';
 
 interface Props {
     data: string;

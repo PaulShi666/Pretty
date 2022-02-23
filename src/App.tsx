@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Pretty from "./components/Pretty";
+import Pretty from "@components/Pretty";
 
 function App() {
     const [prettyData,setPrettyData] = useState(
